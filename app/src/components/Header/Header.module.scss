@@ -1,0 +1,36 @@
+.header {
+  background-color: #fff;
+  
+  &Inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    height: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @media (min-width: 768px) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  &Logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  &Buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

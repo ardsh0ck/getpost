@@ -1,0 +1,144 @@
+@import '../../../assets/scss/vars';
+
+.input {
+  position: relative;
+  display: block;
+
+  input[type=text], 
+  input[type=email], 
+  input[type=tel], 
+  input[type=number] {
+    width: 100%;
+    height: 54px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: $black-87;
+
+    &:focus ~ span,
+    &:not(:placeholder-shown) ~ span {
+      top: 0;
+      left: 12px;
+      padding: 0 4px;
+      font-size: 12px;
+    }
+  }
+
+  input[type=text] ~ &Label,
+  input[type=email] ~ &Label,
+  input[type=tel] ~ &Label,
+  input[type=number] ~ &Label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    display: block;
+    background-color: $bg-color;
+    font-size: 16px;
+    color: #7e7e7e;
+    transition: all 200ms ease-in-out;
+  }
+
+  &Radio {
+    cursor: pointer;
+    
+    span {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      &::before {
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: $bg-color;
+        border: 1px solid #d0cfcf;
+        border-radius: 50%;
+        content: '';
+      }
+    }
+
+    input {
+      position: absolute;
+      z-index: 0;
+      display: block;
+
+      &:checked ~ span::before {
+        border-color: $secondary-color;
+        background-color: $secondary-color;
+        box-shadow: inset 0 0 0 5px $bg-color;
+      }
+    }
+  }
+
+  &File {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+
+    input {
+      height: 54px;
+      padding: 17px 16px;
+      border: 1px solid #d0cfcf;
+      border-left: none;
+      border-radius: 0 4px 4px 0;
+      font-size: 16px;
+      color: #7e7e7e;
+      cursor: pointer;
+
+      &::file-selector-button {
+        position: absolute;
+        display: block;
+        height: 0;
+        width: 0;
+        margin: 0;
+        padding: 0;
+        border: none;
+        overflow: hidden;
+        appearance: none;
+      }
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      height: 54px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border: 1px solid $black-87;
+      border-radius: 4px 0px 0px 4px;
+      background: none;
+      font-size: 16px;
+    }
+  }
+
+  &Error {
+    margin-left: 16px;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #cb3d40;
+  }
+
+  &HasError {
+    input {
+      border: 2px solid $error-color !important;
+    }
+    
+    input[type=file] {
+      border-left: 0 !important;
+    }
+
+    .inputFileButton {
+      border: 2px solid $error-color;
+    }
+
+    span {
+      color: $error-color !important;
+    }
+  }
+}
