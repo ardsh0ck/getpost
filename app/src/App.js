@@ -32,7 +32,6 @@ function App() {
       }
     }
     fetchUsers()
-    console.log('fetch')
   }, [postedSuccessfullyTrue])
 
   const handleShowMore = async () => {

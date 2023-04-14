@@ -1,0 +1,32 @@
+@import './vars';
+
+.tooltip {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    height: 32px;
+    margin-top: 21px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 4px;
+    background-color: $black-87;
+    font-size: 16px;
+    color: #fff;
+    white-space: nowrap;
+    content: attr(data-tooltip);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        display: flex;
+      }
+    }
+  }
+}

@@ -3,6 +3,15 @@
 .registration {
   position: relative;
   margin-bottom: 100px;
+  padding: 0 16px;
+
+  @media (min-width: 768px) {
+    padding: 0 32px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 50px;
+  }
 
   &Form {
     &Heading {
@@ -11,39 +20,39 @@
       font-size: 40px;
       line-height: 40px;
     }
-  
+
     &SubHeading {
       margin-bottom: 14px;
       font-size: 16px;
     }
-  
+
     &Row {
       width: 100%;
       max-width: 380px;
       margin: 0 auto;
     }
-  
+
     &Input {
       display: block;
       margin-bottom: 50px;
-  
+
       &:last-child {
         margin-bottom: 43px;
       }
     }
-  
+
     &PositionList {
       margin-bottom: 50px;
     }
-  
+
     &PositionItem {
       margin-top: 13px;
     }
-  
+
     &Upload {
       margin-bottom: 50px;
     }
-  
+
     &Submit {
       margin: 0 auto;
     }
@@ -60,7 +69,6 @@
       color: $error-color;
     }
   }
-  
 
   &Success {
     position: absolute;
@@ -90,7 +98,7 @@
 @keyframes successMessageAppearing {
   from {
     opacity: 0;
-    transform: scale(.75);
+    transform: scale(0.75);
   }
   to {
     opacity: 1;

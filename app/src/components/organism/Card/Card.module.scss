@@ -13,12 +13,16 @@
   }
 
   &Name {
+    display: inline-block;
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 26px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+
+    p {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
   }
 
   &Bio {
@@ -30,6 +34,15 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+      }
+
+      &Inner {
+        display: inline-block;
+      }
+
+      &Email {
+        text-decoration: none;
+        color: currentColor;
       }
     }
   }
