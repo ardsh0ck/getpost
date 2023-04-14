@@ -1,2 +1,2 @@
 # getpost
-Created with CodeSandbox
+Simple project of using REST API.
