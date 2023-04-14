@@ -1,0 +1,36 @@
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+
+  &Image {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+  }
+
+  &Name {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 26px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &Bio {
+    font-size: 16px;
+    line-height: 26px;
+
+    &Item {
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

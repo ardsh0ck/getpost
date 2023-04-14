@@ -1,0 +1,33 @@
+@import '../../../assets/scss/vars';
+
+.button {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  margin: 0;
+  padding: 0 23px;
+  border: none;
+  border-radius: 80px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+
+  &Yellow {
+    background-color: $primary-color;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #ffe302;
+      }
+    }
+  }
+
+  &:disabled {
+    background-color: #b4b4b4;
+    color: rgba(255, 255, 255, 0.87);
+    cursor: default;
+  }
+}
