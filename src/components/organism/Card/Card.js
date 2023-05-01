@@ -1,7 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
 import styles from './Card.module.scss'
-import tooltip from '../../../assets/scss/_tooltip.scss'
 
 const Card = ({ props }) => {
   const { photo, name, position, email, phone } = props
